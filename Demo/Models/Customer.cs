@@ -1,5 +1,5 @@
 ﻿
-namespace Demo.Models
+namespace MvcInfiniteScrollGridDemo.Models
 {
     public class Customer
     {

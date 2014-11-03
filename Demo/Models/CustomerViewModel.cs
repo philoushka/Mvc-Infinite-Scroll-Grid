@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Demo.Models
+namespace MvcInfiniteScrollGridDemo.Models
 {
     public class CustomerViewModel
     {
