@@ -56,7 +56,7 @@ namespace MvcInfiniteScrollGridDemo.Controllers
             int to = from + RecordsPerPage;
 
             return customers
-                .Where(x => x.Key >= from && x.Key < to)
+                .Where(x => x.Key > from && x.Key <= to)
                 .OrderBy(x => x.Key)
                 .ToDictionary(x => x.Key, x => x.Value);
         }
