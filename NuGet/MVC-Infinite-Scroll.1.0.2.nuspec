@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>MVC-Infinite-Scroll</id>
+        <version>1.0.2</version>
+        <title>ASP.NET MVC Infinite Scroll</title>
+        <authors>Phil Campbell</authors>
+        <projectUrl>https://github.com/philoushka/Mvc-Infinite-Scroll-Grid</projectUrl>
+        <iconUrl>http://i.imgur.com/tvn1Y5s.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>If you have a lot of data to show, but want to have the data show up as the user scrolls, you can use this infinite scrolling technique. 
+
+This package will drop a new controller, view, scripts and sample data. Just navigate to 
+http://localhost:xyz/InfiniteScrollDemo and you'll see the demo view.
+
+Modify the demo code to suit your needs in your web application.
+The demo uses tables and rows, but you can modify easily to use lists and repeating div elements.
+
+Requires an existing ASP.NET MVC application.</description>
+        <summary>Add infinite scrolling to your ASP.NET MVC views.</summary>
+        <releaseNotes>v1.0.2 - Initial release.
+
+Artwork via Font Awesome by Dave Gandy - http://fontawesome.io</releaseNotes>
+        <language>en-US</language>
+        <tags>asp.net mvc grid table page scroll infinite scrolling</tags>
+    </metadata>
+    <files>
+        <file src="content\App_Data\Customers.csv" target="content\App_Data\Customers.csv" />
+        <file src="content\Controllers\InfiniteScrollDemoController.cs.pp" target="content\Controllers\InfiniteScrollDemoController.cs.pp" />
+        <file src="content\Images\spin.gif" target="content\Images\spin.gif" />
+        <file src="content\Scripts\infiniteScroll.js" target="content\Scripts\infiniteScroll.js" />
+        <file src="content\Views\InfiniteScrollDemo\Index.cshtml.pp" target="content\Views\InfiniteScrollDemo\Index.cshtml.pp" />
+        <file src="content\Views\InfiniteScrollDemo\_CustomerRow.cshtml.pp" target="content\Views\InfiniteScrollDemo\_CustomerRow.cshtml.pp" />
+    </files>
+</package>
