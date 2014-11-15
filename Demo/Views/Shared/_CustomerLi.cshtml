@@ -1,0 +1,19 @@
+﻿@model Dictionary<int, MvcInfiniteScrollGridDemo.Models.Customer>
+@{
+    Random random = new Random();
+}
+@foreach (var cust in Model) 
+{
+    <li class="list-group-item">
+        <div class="col-xs-12 col-sm-2 col-md-3 col-lg-2">
+            <img src="http://api.randomuser.me/portraits/men/@(random.Next(99)).jpg" alt="@cust.Value.Name" class="img-responsive img-circle">
+        </div>
+        <div class="col-xs-12 col-sm-10 col-md-9 col-lg-10">
+            <span class="name">@cust.Value.Name</span><br />
+            <span>Employee ID:</span><span class="text-muted">@cust.Value.ID</span><br />
+            <span>Address:</span><span class="text-muted">@cust.Value.MailingAddress</span><br />
+            <span>Email:</span><span class="text-muted">@cust.Value.Email</span><br>
+        </div>
+        <div class="clearfix"></div>
+    </li>
+}

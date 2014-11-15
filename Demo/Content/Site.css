@@ -23,4 +23,8 @@ textarea {
     max-width: 280px;
 }
 
+.name {
+    font-weight: 700;
+    font-size: 1.7em;
+}
  
