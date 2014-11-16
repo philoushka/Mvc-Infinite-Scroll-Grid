@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,7 +8,6 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -19,8 +18,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("MVC Infinite Scroll Demo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>            
+                @Html.ActionLink("MVC Infinite Scroll Demo", "Index", "Home",routeValues: null,htmlAttributes: new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Tables + Rows","Index", "Home")</li>
+                    <li>@Html.ActionLink("Unordered List", "Index", "UL")</li>                    
+                </ul>
+            </div>
         </div>
     </div>
     <div class="container body-content">
@@ -30,7 +35,6 @@
             <p>&copy; @DateTime.Now.Year </p>
         </footer>
     </div>
-    
     @RenderSection("scripts", required: false)
 </body>
 </html>
