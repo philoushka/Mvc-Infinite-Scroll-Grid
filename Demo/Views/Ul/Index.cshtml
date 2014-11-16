@@ -1,0 +1,36 @@
+﻿@using MvcInfiniteScrollGridDemo.Models
+@{
+    ViewBag.Title = "Unordered List Demo";
+}
+
+<h2>Customer Demo</h2>
+<p>
+    This table starts off with <span class="text-primary">@ViewBag.RecordsPerPage</span> items. Scroll down on this page. You'll see that rows are added as you scroll down.
+    The app will deliver <span class="text-primary">@ViewBag.RecordsPerPage </span> items at a time, up to its max of <span class="text-primary">@ViewBag.TotalNumberCustomers</span>.
+</p>
+
+<div class="row">
+    <div class="col-xs-12 col-md-offset-2 col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading c-list">
+                <span class="title">Customers</span>
+            </div>
+            <ul class="list-group infinite-scroll">
+                @Html.Partial("_CustomerLi", (ViewBag.Customers as Dictionary<int, Customer>))
+            </ul>
+        </div>
+        @Html.Partial("_Loading")
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/infiniteScroll.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("div#loading").hide();
+        });
+        var moreRowsUrl = '@Url.Action("index", "ul")';
+        $(window).scroll(ulScrollHandler);
+    </script>
+}
